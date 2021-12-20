@@ -39,7 +39,7 @@ public class GetRequestSteps {
     }
 
     @And("I should see the Number of Views of Pattern {string} Greater Than {string}")
-    public void I_should_see_the_Number_of_Views_of_Patter(String patternNum, String threshold) {
+    public void I_should_see_the_Number_of_Views_of_Pattern(String patternNum, String threshold) {
         assertThat(response.then().extract().path("patterns.pattern[" + patternNum + "].numViews"),
                 greaterThan(threshold));
         System.out.println(response.then().extract().path("patterns.pattern[" + patternNum + "].numViews").toString());
